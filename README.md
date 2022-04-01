@@ -4,7 +4,7 @@ Display the status of your GPU servers in a web page.
 
 ![](asserts/screenshot.png)
 
-# Environment
+## Environment
 
 Create the environment using `conda`:
 
@@ -14,14 +14,14 @@ conda activate gpu-monitor-web
 pip install flask apscheduler markdown2 paramiko
 ```
 
-Besides, make sure `gpustat` is installed on your GPU servers:
+Besides, make sure `gpustat` is installed on your GPU server:
 
 ```
 /usr/bin/pip3 install gpustat
 ```
 
 
-# Configurations
+## Configurations
 
 Generate your SSH keys and copy them to your GPU server:
 
@@ -38,7 +38,7 @@ cp config_template.py config.py
 
 Save your modifications to `config.py`.
 
-# Run
+## Run
 
 ```
 python main.py
