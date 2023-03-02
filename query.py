@@ -86,6 +86,9 @@ def query(server_list, logger):
             except Exception as e:
                 logger.error(str(e))
                 continue
+            # For gpustat > 0.6.0, idle gpu server will return gpu_stat['process'] = None
+            if gpu_stat['processes'] is None:
+                gpu_stat['processes'] = []
 
             for p in gpu_stat['processes']:
                 try:
